@@ -36,3 +36,14 @@ body {
 .navbar-dark {
     background-color: #512DA8;
 }
+
+.reservation-header{
+    background-color: rgb(231, 160, 54);
+
+}
+
+.reservation-button{
+    background-color: rgb(231, 160, 54);
+    color: #0f0f0f
+
+}
