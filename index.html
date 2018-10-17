@@ -38,10 +38,55 @@
                             CONTACT</a></li>
 
                 </ul>
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span> Login</a>
+                </span>
             </div>
         </div>
 
     </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">LOGIN</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3"
+                                    placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3"
+                                    placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <header class="jumbotron">
         <!--Seperates the contents from page-->
         <div class="container">
@@ -56,8 +101,10 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <button type="reserve" class="btn btn-sm btn-primary reservation-header btn-block">
-                        <a href="#reservetable">Reserve Table</a></button>
+
+                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true"
+                        title="Or Call us at <br><strong>+16095169283</strong>" data-placement="bottom" href="#reservetable">Reserve
+                        Table</a>
                 </div>
             </div>
         </div>
@@ -74,7 +121,8 @@
                     <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="uthappizza">
                     <div class="media-body">
                         <h2 class="mt-0">Uthappizza<span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">4.99$</span></h2>
-                        <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola
+                        <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian
+                            pizza, topped with Cerignola
                             olives,
                             ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
                     </div>
@@ -93,7 +141,8 @@
                 <div class="media">
                     <div class="media-body">
                         <h2 class="mt-0">Weekend Grand Buffet<span class="badge badge-danger">NEW</span></h2>
-                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing
+                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five
+                            different salads, six enticing
                             appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft
                             drinks. All
                             for just $19.99 per person </p>
@@ -113,7 +162,8 @@
                     <div class="media-body">
                         <h2>Alberto Somayya</h2>
                         <h4>Executive Chef</h4>
-                        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked
+                        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International
+                            experience having worked
                             closely with
                             whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian
                             fusion
@@ -233,6 +283,11 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
 </body>
 
 </html>
