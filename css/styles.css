@@ -44,6 +44,14 @@ body {
 
 .reservation-button{
     background-color: rgb(231, 160, 54);
-    color: #0f0f0f
+    color: #0f0f0f;
 
+}
+
+.tab-content{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom:  1px solid #ddd;
+    padding : 10px;
+    background-color: rgb(183, 173, 201);
 }
