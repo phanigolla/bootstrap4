@@ -2,6 +2,7 @@ $lt-gray: #ddd;
 $background-dark: #512DA8;
 $background-light: #9575CD;
 $background-pale: #D1C4E9;
+$button-close : floralwhite;
 
 //height variables
 $carousel-item-height : 300px;
@@ -73,4 +74,30 @@ body{
     right:0px;
     position: absolute;
     bottom: 0px;
+}
+
+.reservation-header {
+    background:  $background-dark;
+    color:floralwhite;
+
+    .close-button {
+        color : $button-close
+    }
+}
+
+.reservation-body {
+    background: $background-pale;
+}
+
+.login-header {
+    background:  $background-dark;
+    color:floralwhite;
+
+    .close-button {
+        color : $button-close;
+    }
+}
+
+.login-body {
+    background: $background-pale;
 }

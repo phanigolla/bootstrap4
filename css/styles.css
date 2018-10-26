@@ -51,3 +51,21 @@ body {
   right: 0px;
   position: absolute;
   bottom: 0px; }
+
+.reservation-header {
+  background: #512DA8;
+  color: floralwhite; }
+  .reservation-header .close-button {
+    color: floralwhite; }
+
+.reservation-body {
+  background: #D1C4E9; }
+
+.login-header {
+  background: #512DA8;
+  color: floralwhite; }
+  .login-header .close-button {
+    color: floralwhite; }
+
+.login-body {
+  background: #D1C4E9; }

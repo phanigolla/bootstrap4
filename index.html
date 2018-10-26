@@ -39,7 +39,8 @@
 
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <!--<a data-toggle="modal" data-target="#loginModal">-->
+                            <a id="loginModalToggle" data-target="#loginModal">
                         <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
@@ -50,13 +51,13 @@
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header login-header">
                     <h4 class="modal-title">LOGIN</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close close-button" data-dismiss="modal">
                         &times;
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body login-body">
                     <form>
                         <div class="form-row">
                             <div class="form-group col-sm-4">
@@ -89,16 +90,16 @@
     </div>
 
     <!--Modal for Reserve table -->
-    <div id="reservetableModal" class="modal fade" role="dialog">
+    <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header reservation-header">
                     <h4 class="modal-title">Reserve Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close close-button" data-dismiss="modal">
                         &times;
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body reservation-body">
                     <form>
                         <div class="form-group row">
                             <label for="guestsnumber" class="col-md-2 col-form-label">No of Guests</label>
@@ -187,7 +188,7 @@
                     <!--<a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true"
                         title="Or Call us at <br><strong>+16095169283</strong>" data-placement="bottom" href="#reservetable">Reserve
                         Table</a>-->
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reservetableModal">Reserve
+                    <a role="button" class="btn btn-block nav-link btn-warning" id="reserveModalToggle" data-target="#reserveModal">Reserve
                         Table</a>
                 </div>
             </div>
@@ -326,7 +327,7 @@
 
             </div>
         </div>
-        <div class="row row-content justify-content-sm-center" id="reservetable">
+       <!-- <div class="row row-content justify-content-sm-center" id="reservetable">
             <div class="card">
                 <h3 class="card-header reservation-header text-white">Reserve a Table</h3>
                 <div class="card-body">
@@ -385,7 +386,7 @@
             </div>
 
 
-        </div>
+        </div>-->
 
         <footer class="footer">
             <div class="container">
@@ -456,6 +457,14 @@
                         $('#carouselButton').children('span').removeClass('fa-play');
                         $('#carouselButton').children('span').addClass('fa-pause');
                     }
+                });
+
+                $("#loginModalToggle").click(function(){
+                        $('#loginModal').modal('toggle');
+                });
+
+                $("#reserveModalToggle").click(function(){
+                    $("#reserveModal").modal('toggle');
                 });
 
             });
